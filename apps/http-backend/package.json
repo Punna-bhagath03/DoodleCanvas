@@ -8,9 +8,13 @@
     "dev": "npm run build && npm run start"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.9",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/express": "^5.0.1",
-    "express": "^5.1.0"
+    "@types/express": "^5.0.1"
   },
   "keywords": [],
   "author": "",
