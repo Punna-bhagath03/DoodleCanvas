@@ -4,12 +4,7 @@ export const CreateUserSchema = z.object({
   username: z
     .string()
     .min(4, 'Username must be at least 4 characters')
-    .max(20, 'Username must be at most 20 characters')
-    .regex(
-      /^[a-zA-Z0-9_.]+$/,
-      'Only alphanumeric characters, underscores, and dots are allowed'
-    ),
-
+    .max(30, 'Username must be at most 20 characters'),
   password: z
     .string()
     .min(8, 'Password must be at least 8 characters')
@@ -23,17 +18,12 @@ export const CreateUserSchema = z.object({
 });
 
 export const SigninSchema = z.object({
-  username: z
-    .string()
-    .min(4, 'Invalid username')
-    .regex(/^[a-zA-Z0-9_.]+$/, 'Invalid username format'),
-
+  username: z.string().min(4, 'Invalid username'),
   password: z.string().min(8, 'Invalid password'),
 });
 
 export const CreateRoomSchema = z.object({
-  name: z
-    .string()
-    .min(3, 'Room name must be at least 3 characters')
-    .max(30, 'Room name too long'),
+  name: z.string(),
+  // .min(3, 'Room name must be at least 3 characters')
+  // .max(30, 'Room name too long'),
 });
