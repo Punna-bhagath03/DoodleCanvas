@@ -20,6 +20,9 @@ importers:
 
   apps/http-backend:
     dependencies:
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../../packages/db
       '@types/jsonwebtoken':
         specifier: ^9.0.9
         version: 9.0.9
@@ -130,13 +133,13 @@ importers:
       postgres:
         specifier: ^3.4.5
         version: 3.4.5
-      prisma:
-        specifier: ^6.7.0
-        version: 6.7.0(typescript@5.8.2)
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
+      prisma:
+        specifier: ^6.7.0
+        version: 6.7.0(typescript@5.8.2)
 
   packages/eslint-config:
     devDependencies:

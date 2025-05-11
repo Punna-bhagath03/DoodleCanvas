@@ -9,11 +9,11 @@ datasource db {
 }
 
 model User {
-  id       String @id @default(uuid())
-  email    String
+  id       String  @id @default(uuid())
+  email    String  @unique
   password String
   name     String
-  photo    String
+  photo    String?
   rooms    Room[]
   chats    Chat[]
 }

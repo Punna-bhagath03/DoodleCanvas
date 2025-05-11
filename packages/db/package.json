@@ -1,5 +1,5 @@
 {
-  "name": "db",
+  "name": "@repo/db",
   "version": "1.0.0",
   "main": "index.js",
   "exports": {
@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "prisma": "^6.7.0"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,6 @@
   "description": "",
   "dependencies": {
     "@prisma/client": "6.7.0",
-    "postgres": "^3.4.5",
-    "prisma": "^6.7.0"
+    "postgres": "^3.4.5"
   }
 }
